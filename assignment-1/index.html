@@ -1,0 +1,31 @@
+<html>
+    
+    <script>
+        let users = [
+            { name: "ankit" },
+            { name: "shah" },
+            { name: "sai" },
+            { name: "pranish" },
+            { name: "swapnali" }
+        ]
+
+        console.log("data:", users)
+        
+        let userMarks = users.map(users=>{
+            users.marks = Math.random() * 100;
+            return users;
+        })
+
+        console.log("Map:", userMarks)
+        
+        let filterUsers = userMarks.filter(userMarks => userMarks.marks > 60);
+
+        console.log("filter", filterUsers);
+
+        let reduceUsers = userMarks.reduce((reduceUsers, user) => {reduceUsers.push(user);
+            return reduceUsers;
+        }, []);
+
+        console.log("reduce", reduceUsers);
+    </script>
+</html>
